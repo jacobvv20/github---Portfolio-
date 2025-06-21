@@ -35,7 +35,8 @@
     --line-height-small: 1.2;
 
     --black: #000;
-    --pink: #ff3258;
+    /* MODIFIED: Changed the accent color from pink to a professional blue */
+    --accent-color: #00A3FF; 
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
 
@@ -123,7 +124,8 @@ h1,
 h2,
 h3 {
     font-family: 'Jost', sans-serif;
-    font-weight: 400;
+    /* MODIFIED: Changed font-weight for a slightly more modern look */
+    font-weight: 300; 
     line-height: var(--line-height-small);
     color: var(--white);
 }
@@ -150,7 +152,8 @@ h2::after {
     display: block;
     height: 2px;
     width: 10rem;
-    background: var(--pink);
+    /* MODIFIED: Uses the new accent color */
+    background: var(--accent-color);
     margin: var(--gutter-small) 0;
 }
 
@@ -201,7 +204,8 @@ a {
 
 button:focus,
 a:focus {
-    outline: 2px solid var(--pink);
+    /* MODIFIED: Uses the new accent color */
+    outline: 2px solid var(--accent-color);
 }
 
 body:not(.user-is-tabbing) button:focus,
@@ -210,7 +214,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .link:hover {
-    color: var(--pink);
+    /* MODIFIED: Uses the new accent color */
+    color: var(--accent-color);
 }
 
 .btn {
@@ -219,7 +224,8 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 4.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid  var(--pink);
+    /* MODIFIED: Uses the new accent color */
+    border: 1px solid  var(--accent-color);
     font-weight: 400;
 }
 
@@ -243,20 +249,23 @@ body:not(.user-is-tabbing) a:focus {
 .btn:hover::after,
 .btn:focus::after {
     right: 0;
-    background: var(--pink);
+    /* MODIFIED: Uses the new accent color */
+    background: var(--accent-color);
 }
 
-.btn--pink {
-    background: var(--pink);
+/* MODIFIED: Renamed from btn--pink to btn--bg for clarity */
+.btn--bg {
+    /* MODIFIED: Uses the new accent color */
+    background: var(--accent-color);
     transition: all 0.2s;
 }
 
-.btn--pink::after {
+.btn--bg::after {
     display: none;
 }
 
-.btn--pink:hover,
-.btn--pink:focus {
+.btn--bg:hover,
+.btn--bg:focus {
     background: transparent;
 }
 
@@ -266,7 +275,8 @@ body:not(.user-is-tabbing) a:focus {
     padding: .6rem;
     color: inherit;
     text-decoration: none;
-    border-bottom: 1px solid var(--pink);
+    /* MODIFIED: Uses the new accent color */
+    border-bottom: 1px solid var(--accent-color);
 }
 
 .link__text::after {
@@ -289,7 +299,8 @@ body:not(.user-is-tabbing) a:focus {
 .link__text:hover::after,
 .link__text:focus:after {
     right: 0;
-    background: var(--pink);
+    /* MODIFIED: Uses the new accent color */
+    background: var(--accent-color);
 }
 
 .link__text span {
@@ -308,7 +319,8 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
     height: 5.5rem;
     width: 5.5rem;
-    background-color: var(--pink);
+    /* MODIFIED: Uses the new accent color */
+    background-color: var(--accent-color);
     border-radius: 50%;
     z-index: 10;
     visibility: hidden;
@@ -390,13 +402,15 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__link:hover {
-    color: var(--pink);
+    /* MODIFIED: Uses the new accent color */
+    color: var(--accent-color);
 }
 
 .nav__link:hover::after {
     right: 0;
     height: 2px;
-    background: var(--pink);
+    /* MODIFIED: Uses the new accent color */
+    background: var(--accent-color);
 }
 
 /* --------------------------------------- */
@@ -404,11 +418,13 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header.jpg');
+    /* MODIFIED: Added a darker overlay for better text contrast and changed the image */
+    background: linear-gradient(rgba(0,0,0, .6), rgba(0,0,0, .8)), 
+        url('./images/CBN-Banner.jpg');
     height: 100vh;
     background-size: cover;
-    background-position: center;
+    /* MODIFIED: Positioned the background image to the left */
+    background-position: left center;
     background-attachment: fixed;
     font-size: var(--font-size-normal);
 }
@@ -437,7 +453,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
-/* ----- Work ----- */
+/* ----- Work / Experience / Projects ----- */
 /* --------------------------------------- */
 
 .work__box {
@@ -453,26 +469,35 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__box:not(:last-child) {
-    margin-bottom: 25rem;
+    margin-bottom: 15rem; /* MODIFIED: Reduced the large gap between sections */
 }
 
 @media(max-width: 500px) {
     .work__box:not(:last-child) {
-        margin-bottom: 20rem;
+        margin-bottom: 12rem;
     }
 }
 
 .work__links {
     display: flex;
     align-items: center;
+    margin-top: 3rem; /* MODIFIED: Added some space above the link */
 }
 
 .work__text {
-    flex: 0 0 30%;
+    flex: 0 0 45%; /* MODIFIED: Gave text a bit more space */
 }
 
+/* Added style for the company/lab name */
+.work__company {
+    font-size: var(--font-size-small);
+    color: var(--white);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+
 .work__list {
-    /* list-style-type: square; */
     list-style-position: inside;
     margin-bottom: var(--gutter-normal);
 }
@@ -502,32 +527,6 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 900px) {
     .work__code {
         height: 4rem;
-    }
-}
-
-/* --------------------------------------- */
-/* ----- Clients ----- */
-/* --------------------------------------- */
-
-.client__logos {
-    display: flex;
-    justify-content: space-between;
-    filter: invert(100%) grayscale(100%) opacity(.8);
-}
-
-.client__logo {
-    height: 6.5rem;
-    max-width: 18rem;
-}
-
-@media(max-width: 1240px) {
-    .client__logos {
-        overflow-x: scroll;
-        padding: var(--gutter-normal);
-    }
-
-    .client__logo:not(:last-of-type) {
-        margin-right: var(--gutter-medium);
     }
 }
 
@@ -593,17 +592,6 @@ body:not(.user-is-tabbing) a:focus {
 
 .footer__social-image {
     height: 4rem;
-}
-
-.footer__github-buttons {
-    display: flex;
-    justify-content: center;
-}
-
-.footer__github-buttons iframe {
-    height: 2.5rem;
-    width: 84px;
-    transform: translateY(3px);
 }
 
 @media(max-width: 500px) {
