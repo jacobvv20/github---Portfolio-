@@ -19,7 +19,6 @@
   <!-- ***** Header ***** -->
   <header class="header" role="banner" id="top">
     <div class="row">
-      <!-- UPDATED NAVIGATION -->
       <nav class="nav" role="navigation">
         <ul class="nav__items">
           <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
@@ -41,17 +40,17 @@
     </div>
   </header>
 
-  <!-- ***** Main Content - RESTRUCTURED ***** -->
   <main role="main">
 
-    <!-- ***** 1. Work Experience (NEW SECTION) ***** -->
+    <!-- ***** 1. Work Experience ***** -->
     <section class="work" id="experience">
       <div class="row">
         <h2>Work Experience</h2>
         <div class="work__boxes">
           <!-- Experience 1: Hua Lab -->
           <div class="work__box">
-            <div class="work__text">
+            <!-- MODIFIED: Text section is now full width -->
+            <div class="work__text" style="flex-basis: 100%;">
               <h3>Research Coordinator - Hua Lab</h3>
               <p class="work__company">Kirby Center, Kennedy Krieger Institute, MD</p>
               <p>
@@ -63,15 +62,12 @@
                 <li>Contributing to research on diseases like Parkinson's, Alzheimer's, and stroke.</li>
               </ul>
             </div>
-            <!-- We can add a relevant image here later if you want -->
-            <div class="work__image-box">
-              <img src="./images/jacob-photo.jpg" class="work__image" alt="Work at Hua Lab" />
-            </div>
+            <!-- MODIFIED: Removed the image box from all work experiences -->
           </div>
 
           <!-- Experience 2: Mao Lab -->
           <div class="work__box">
-            <div class="work__text">
+            <div class="work__text" style="flex-basis: 100%;">
               <h3>Research Assistant - Mao Lab</h3>
               <p class="work__company">Institute for Cell Engineering, Johns Hopkins University</p>
               <p>
@@ -83,15 +79,11 @@
                 <li>Documented sample analyses and integrated data into LIMS systems.</li>
               </ul>
             </div>
-             <!-- We can add a relevant image here later if you want -->
-            <div class="work__image-box">
-              <img src="./images/jacob-photo.jpg" class="work__image" alt="Work at Mao Lab" />
-            </div>
           </div>
           
           <!-- Experience 3: Nanotechnology Intern -->
           <div class="work__box">
-            <div class="work__text">
+            <div class="work__text" style="flex-basis: 100%;">
               <h3>Nanotechnology Research Intern</h3>
               <p class="work__company">Dept. of Nanoscience, University of Kerala</p>
               <p>
@@ -103,21 +95,43 @@
                 <li>Maintained comprehensive inventory and experimental methodology logs.</li>
               </ul>
             </div>
-             <!-- We can add a relevant image here later if you want -->
-            <div class="work__image-box">
-              <img src="./images/jacob-photo.jpg" class="work__image" alt="Nanotechnology Internship" />
-            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ***** 2. Projects (Formerly "My Work") ***** -->
+    <!-- ***** 2. Projects ***** -->
     <section class="work" id="projects">
       <div class="row">
         <h2>Projects</h2>
         <div class="work__boxes">
-          <!-- Project 1 -->
+
+          <!-- MODIFIED: Project 1 (T-cell) is now first and has a new title -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Sequence level approaches for assessing TCR sequences yield insights into T Cell repertoire dynamics in ulcerative colitis patients</h3>
+              <p>
+                Analyzed TCR sequencing data to identify patient-specific biomarkers distinguishing flare and remission states in ulcerative colitis, uncovering temporal disease patterns through longitudinal studies.
+              </p>
+              <ul class="work__list">
+                <li>Bioinformatics</li>
+                <li>Python</li>
+                <li>R Programming</li>
+                <li>Data Analysis</li>
+              </ul>
+              <!-- MODIFIED: "Visit Site" link removed -->
+              <div class="work__links">
+                <a href="https://github.com/jacobvv20" title="View Source Code" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/project-tcell.png" class="work__image" alt="T-cell Repertoire Project" />
+            </div>
+          </div>
+
+          <!-- Project 2 (Babesia) -->
           <div class="work__box">
             <div class="work__text">
               <h3>Detection Of Babesia Bigemina</h3>
@@ -130,8 +144,8 @@
                 <li>Impedance Analysis</li>
                 <li>Microscopy</li>
               </ul>
+              <!-- MODIFIED: "Visit Site" link removed -->
               <div class="work__links">
-                <a href="#" class="link__text">Visit Site <span>→</span></a>
                 <a href="https://github.com/jacobvv20" title="View Source Code" target="_blank" rel="noopener noreferrer">
                   <img src="./images/github.svg" class="work__code" alt="GitHub">
                 </a>
@@ -139,33 +153,12 @@
             </div>
             <div class="work__image-box">
               <img src="./images/project-babesia.png" class="work__image" alt="Babesia Detection Project" />
+              <!-- NEW: Second photo added -->
+              <img src="./images/babesia_pjt_2.png" class="work__image" alt="Babesia Project detail" style="margin-top: 1.5rem;"/>
             </div>
           </div>
-          <!-- Project 2 -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>T-cell Repertoire in Ulcerative Colitis</h3>
-              <p>
-                Analyzed TCR sequencing data to identify patient-specific biomarkers distinguishing flare and remission states in ulcerative colitis, uncovering temporal disease patterns through longitudinal studies.
-              </p>
-              <ul class="work__list">
-                <li>Bioinformatics</li>
-                <li>Python</li>
-                <li>R Programming</li>
-                <li>Data Analysis</li>
-              </ul>
-              <div class="work__links">
-                <a href="#" class="link__text">Visit Site <span>→</span></a>
-                <a href="https://github.com/jacobvv20" title="View Source Code" target="_blank" rel="noopener noreferrer">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-tcell.png" class="work__image" alt="T-cell Repertoire Project" />
-            </div>
-          </div>
-          <!-- Project 3 -->
+          
+          <!-- Project 3 (Rehab) -->
           <div class="work__box">
             <div class="work__text">
               <h3>Rehabilitation Effectiveness Recording System</h3>
@@ -178,8 +171,8 @@
                 <li>C Programming</li>
                 <li>Embedded Systems (8051)</li>
               </ul>
+              <!-- MODIFIED: "Visit Site" link removed -->
               <div class="work__links">
-                <a href="#" class="link__text">Visit Site <span>→</span></a>
                 <a href="https://github.com/jacobvv20" title="View Source Code" target="_blank" rel="noopener noreferrer">
                   <img src="./images/github.svg" class="work__code" alt="GitHub">
                 </a>
@@ -187,6 +180,33 @@
             </div>
             <div class="work__image-box">
               <img src="./images/project-rehab.png" class="work__image" alt="Rehabilitation System Project" />
+              <!-- NEW: Second photo added -->
+              <img src="./images/project-rehab_2.png" class="work__image" alt="Rehabilitation Project detail" style="margin-top: 1.5rem;"/>
+            </div>
+          </div>
+
+          <!-- NEW: Project 4 (Nanoparticle) -->
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Synthesis and Characterization of Cr2O3 Nanoparticle</h3>
+              <p>
+                Synthesized Cr2O3 nanoparticles using a hydrothermal process and characterized their mechanical, corrosive, and optical properties to enhance their applicability in medical devices.
+              </p>
+              <ul class="work__list">
+                <li>Nanomaterial Synthesis</li>
+                <li>X-ray Diffraction (XRD)</li>
+                <li>UV-Visible Spectroscopy</li>
+                <li>Biomaterials</li>
+              </ul>
+              <!-- MODIFIED: "Visit Site" link removed -->
+              <div class="work__links">
+                <a href="https://github.com/jacobvv20" title="View Source Code" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/project-nanoparticle.png" class="work__image" alt="Nanoparticle Synthesis Project" />
             </div>
           </div>
         </div>
@@ -199,8 +219,15 @@
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
+            <!-- MODIFIED: Replaced with your new, detailed "About Me" text -->
             <p>
-              I am a Biomedical Engineer with robust laboratory and research experience, adept at conducting routine tests, documenting procedures, and managing data analysis under strict SOPs. I have demonstrated proficiency in DNA/RNA extraction, PCR, protein purification, and various analytical techniques, and I bring meticulous attention to detail and a strong practical background to support dynamic research environments.
+              A dedicated biomedical engineer and a researcher, with a Master’s in Biomedical Engineering from Johns Hopkins Whiting School of Engineering, driven by a passion for advancing neuroengineering and medical imaging to improve treatments for neurological disorders. My research focuses on functional brain imaging, MR physics, medical imaging, and artificial intelligence, with an emphasis on developing innovative solutions like patient-specific neuromodulation systems.
+            </p>
+            <p>
+              My expertise spans computational modeling, biomedical signal processing, and wet lab techniques, honed through projects such as analyzing electrophysiological data for Parkinson’s disease and developing AI-based detection systems. At the University of Kerala’s Department of Nanoscience and Nanotechnology, I synthesized nanoparticles for biomedical applications, strengthening my problem-solving and interdisciplinary collaboration skills. Proficient in MATLAB, Python, and COMSOL, I have contributed to peer-reviewed publications, including INCOFT 2025, reflecting my commitment to quality and impactful research.
+            </p>
+            <p>
+              I am motivated to bridge cutting-edge engineering with clinical applications, delivering transformative solutions that enhance patient outcomes. I thrive in collaborative, multidisciplinary environments, leveraging strong communication and technical skills to drive innovation in biomedical technology.
             </p>
             <a href="./Jacob_Varghese_Resume.pdf" class="btn" target="_blank" rel="noopener noreferrer">My Resume</a>
           </div>
@@ -211,12 +238,12 @@
       </div>
     </section>
 
-    <!-- ***** 4. Achievements & Publications (NEW SECTION) ***** -->
+    <!-- ***** 4. Achievements & Publications ***** -->
     <section class="work" id="achievements">
         <div class="row">
           <h2>Achievements & Publications</h2>
           <div class="work__box">
-            <div class="work__text" style="flex-basis: 100%;"> <!-- Full width text -->
+            <div class="work__text" style="flex-basis: 100%;">
               <h3>Honors & Awards</h3>
               <ul class="work__list">
                 <li>Rank Holder - APJ Abdul Kalam Technological University (2024)</li>
@@ -230,10 +257,9 @@
           </div>
         </div>
       </section>
-
   </main>
 
-  <!-- ***** Contact ***** -->
+  <!-- ***** Contact & Footer (No changes here) ***** -->
   <section class="contact" id="contact">
     <div class="row">
       <h2>Get in Touch</h2>
@@ -246,7 +272,6 @@
     </div>
   </section>
 
-  <!-- ***** Footer ***** -->
   <footer role="contentinfo" class="footer">
     <div class="row">
       <ul class="footer__social-links">
